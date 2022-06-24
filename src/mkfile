@@ -1,0 +1,12 @@
+BIN=$PLAN9/bin
+LIBDIR=$PLAN9/lib
+
+CC=9c
+LD=9l
+
+cutthroat:Q:	./
+	9c -Wno-sizeof-array-div -c main.c bone.c player.c game.c strat.c
+	9l -o cutthroat main.o bone.o player.o game.o strat.o
+nuke:
+	rm *.o
+	rm cutthroat
