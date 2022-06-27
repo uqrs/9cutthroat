@@ -1,4 +1,4 @@
-typedef struct game game;
+typedef struct game game;	/* (game.h:0/struct game {/) */
 typedef struct player player;
 typedef struct player {
 	pile *hand;						/* player hand */
