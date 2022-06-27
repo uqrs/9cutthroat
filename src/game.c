@@ -23,6 +23,7 @@ nukegame(game *gp)
 		nukeplayer(gp->players[i]);
 
 	nukepile(gp->yard);
+	nukepile(gp->field);
 	free(gp);
 }
 
@@ -38,6 +39,7 @@ initgame(game *gp)
 	gp->field = mkpile();
 	gp->yard = mkpile();
 	if (initpile(gp->yard) < 0) {
+		nukepile(gp->field);
 		nukepile(gp->yard);
 		return -1;
 	}

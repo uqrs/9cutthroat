@@ -3,8 +3,6 @@
 #include "bone.h"
 #include "player.h"
 
-int nplayers = 0;
-
 player *
 mkplayer(int id, bone *(*strategy)(game *, player *, int *))
 {
